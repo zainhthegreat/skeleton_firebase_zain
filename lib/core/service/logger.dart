@@ -6,7 +6,6 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:logger/logger.dart';
 import 'package:skeleton_firebase_zain/core/service/service_locator.dart';
 
-
 class _CustomFilter extends LogFilter {
   FirebaseCrashlytics? _crashlytics;
 
@@ -24,12 +23,12 @@ class _CustomFilter extends LogFilter {
   }
 }
 
-//Custom printer
+//Custom printer for logs
 class _CustomPrinter extends PrettyPrinter {
   FirebaseCrashlytics? _crashlytics;
-  final String prefix;
+  final String prefixStatement;
 
-  _CustomPrinter(this.prefix)
+  _CustomPrinter(this.prefixStatement)
       : super(
           errorMethodCount: 10,
           methodCount: 0,
@@ -37,7 +36,7 @@ class _CustomPrinter extends PrettyPrinter {
 
   @override
   String stringifyMessage(dynamic message) {
-    return '[$prefix] - ${super.stringifyMessage(message)}';
+    return '[$prefixStatement] - ${super.stringifyMessage(message)}';
   }
 
   @override
@@ -50,8 +49,7 @@ class _CustomPrinter extends PrettyPrinter {
       if (_crashlytics?.isCrashlyticsCollectionEnabled ?? false) {
         Level crashLevel = Level.wtf;
 
-        try {
-        } catch (err) {/* ignore */}
+        try {} catch (err) {/* ignore */}
 
         if (event.level.index >= crashLevel.index) {
           _crashlytics?.recordError(
@@ -72,16 +70,18 @@ class _CustomPrinter extends PrettyPrinter {
   }
 }
 
-//Use this class for logging across the app
+///Use this class for logging across the app
+///
+///[functionKey] fucntion name where it is called from(optional)
 Logger getLogger({
   String prefix = 'PrefixNotSet',
+  String? functionKey,
 }) {
   Level? logLevel = Level.verbose;
-  try {
-  } catch (err) {/* ignore */}
+  try {} catch (err) {/* ignore */}
   return Logger(
     filter: _CustomFilter(),
-    printer: _CustomPrinter(prefix),
+    printer: _CustomPrinter('$prefix ${functionKey ?? ''}'),
     level: logLevel,
   );
 }
