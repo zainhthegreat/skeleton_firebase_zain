@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "program": "lib/main.dart",
+            "name": "Launch Z",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "lib/main.dart"
+            ]
+        },
+        {
             "program": "lib/main_ci.dart",
             "name": "Launch CI",
             "request": "launch",

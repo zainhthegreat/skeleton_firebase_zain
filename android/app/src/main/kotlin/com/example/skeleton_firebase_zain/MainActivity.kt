@@ -1,4 +1,4 @@
-package com.example.skeleton_firebase_zain
+package com.zain.skeleton
 
 import io.flutter.embedding.android.FlutterActivity
 

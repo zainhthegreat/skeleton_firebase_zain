@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.skeleton_firebase_zain">
+    package="com.zain.skeleton">
    <application
         android:label="skeleton_firebase_zain"
         android:name="${applicationName}"

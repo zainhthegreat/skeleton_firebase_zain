@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    if (_initalized != true) {
+    if (_initalized == true) {
       return MaterialApp(
         home: Scaffold(
           appBar: AppBar(
