@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "540104410688",
+    "project_id": "skeleton-zain",
+    "storage_bucket": "skeleton-zain.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540104410688:android:c4ec28ad46f9f55bb781a5",
+        "android_client_info": {
+          "package_name": "com.zain.skeleton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540104410688-t50co6jo1sojgl59cjlaggvkmld7o0di.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj-4ATkwS6wEOYEa5JwBgkAbx30_lxAeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540104410688-t50co6jo1sojgl59cjlaggvkmld7o0di.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540104410688-aq3gf4vgtdc7odvghv9qafoduaiqfn5b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zain.skeleton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
