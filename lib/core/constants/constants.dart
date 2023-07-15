@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Constants{
-
-  static const appName= 'skeleton';
-
+class Constants {
+  static const appName = 'skeleton';
 }
 
 //Vertical Spacers
+const vSpacerXS = SizedBox(
+  height: paddingXS,
+);
 const vSpacerS = SizedBox(
   height: paddingS,
+);
+const vSpacerSM = SizedBox(
+  height: paddingSM,
 );
 const vSpacerM = SizedBox(
   height: paddingM,
@@ -32,8 +36,14 @@ SizedBox vSpacerCustom(double height) {
 }
 
 //Horizontal spacers
+const hSpacerXS = SizedBox(
+  width: paddingXS,
+);
 const hSpacerS = SizedBox(
   width: paddingS,
+);
+const hSpacerSM = SizedBox(
+  width: paddingSM,
 );
 const hSpacerM = SizedBox(
   width: paddingM,
@@ -55,7 +65,6 @@ SizedBox hSpacerCustom(double width) {
     width: width,
   );
 }
-
 
 const paddingZero = 0.0;
 const paddingXS = 2.0;
